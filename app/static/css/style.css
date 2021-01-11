@@ -74,3 +74,8 @@ form {
     float: right;
     margin-top: 7px;
 } */
+
+select {
+    width: 300px;
+    height: 30px;
+}

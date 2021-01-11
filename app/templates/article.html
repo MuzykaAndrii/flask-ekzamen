@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for cat, msg in get_flashed_messages(True) %}
+<ul class="list-group">
+    <li class="list-group-item list-group-item-{{cat}}">{{msg}}</li>
+</ul>
+{%endfor %}
+
+<h1>{{ article.name }}</h1>
+<b>Created by: </b> {{ article.author }}
+<p>Date posted: {{ article.year_posted }}</p>
+<p>Number of pages: {{ article.count_of_pages }}</p>
+<p>{{ article.note }}</p>
+<p>Type: {{ article.type_of_art }}</p>
+
+{% endblock %}
